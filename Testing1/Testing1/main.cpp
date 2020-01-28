@@ -1,6 +1,7 @@
 #include <string>
 #include <iostream>
 #include "ChangeNum.h"
+#include "Vehicle.h"
 
 //change 1
 
@@ -34,6 +35,14 @@ int main()
 	dummy = DoubleNum(dummy);
 
 	Print(to_string(dummy));
+
+	
+
+	string testN = "car1";
+	string testC = "red";
+	GasCar C1(testN, testC);
+	Print(C1.getType());
+
 
 }
 

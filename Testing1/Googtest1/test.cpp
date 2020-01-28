@@ -24,10 +24,24 @@ TEST(BuildCarTest, GetCarInit) {
 	Car C1(testN, testC);
 	ASSERT_EQ(testN, C1.getName());
 	ASSERT_EQ(testC, C1.getColor());
-	ASSERT_EQ("Car ", C1.getType());
+	ASSERT_EQ("Car Vehicle", C1.getType());
 	ASSERT_EQ(5, C1.getTravel());
 	C1.AddDestination();
 	ASSERT_EQ(10, C1.getTravel());
+
+}
+
+TEST(BuildGasCarTest, GetGasCarInit) {
+	string testN = "car1";
+	string testC = "red";
+
+	GasCar GC1(testN, testC);
+	ASSERT_EQ(testN, GC1.getName());
+	ASSERT_EQ(testC, GC1.getColor());
+	ASSERT_EQ("Gas Car Vehicle", GC1.getType());
+	ASSERT_EQ(3, GC1.getTravel());
+	GC1.AddDestination();
+	ASSERT_EQ(7, GC1.getTravel());
 
 }
 

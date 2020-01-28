@@ -25,18 +25,36 @@ protected:
 	string Name;
 	int TravelTime;
 	string Color;
-	string Type;
+	string Type ;
 
 };
 
 class Car : public Vehicle
 {
 public:
+	//default constructor
+	Car();
 
 	Car(string, string);
 
 	//gets overidden
 	void AddDestination();
+
+
+
+};
+
+class GasCar : public Car
+{
+public:
+	//default constructor
+	GasCar();
+
+	GasCar(string, string);
+
+	//gets overidden
+	void AddDestination();
+
 
 
 };
