@@ -90,3 +90,26 @@ void GasCar::AddDestination()
 {
 	TravelTime = TravelTime + TravelTime + 1;
 }
+
+
+
+ElectricCar::ElectricCar()
+{
+	Type = "Eelctric " + Type;
+}
+
+ElectricCar::ElectricCar(string n, string c)
+{
+	Name = n;
+	Color = c;
+	TravelTime = 4;
+	Type = "Electric " + Type;
+}
+
+void ElectricCar::AddDestination()
+{
+	if(TravelTime <9)
+		TravelTime = TravelTime + TravelTime;
+	else
+		TravelTime = TravelTime + TravelTime + 5;
+}

@@ -54,7 +54,16 @@ public:
 
 	//gets overidden
 	void AddDestination();
+};
 
+class ElectricCar : public Car
+{
+public:
+	//default constructor
+	ElectricCar();
 
+	ElectricCar(string, string);
 
+	//gets overidden
+	void AddDestination();
 };

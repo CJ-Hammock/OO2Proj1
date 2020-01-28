@@ -31,7 +31,7 @@ TEST(BuildCarTest, GetCarInit) {
 
 }
 
-TEST(BuildGasCarTest, GetGasCarInit) {
+TEST(BuildGasCarTest, GetGasCar) {
 	string testN = "car1";
 	string testC = "red";
 
@@ -42,8 +42,26 @@ TEST(BuildGasCarTest, GetGasCarInit) {
 	ASSERT_EQ(3, GC1.getTravel());
 	GC1.AddDestination();
 	ASSERT_EQ(7, GC1.getTravel());
-
 }
+
+TEST(BuildElectricCarTest, GetElectricCar) {
+	string testN = "car3";
+	string testC = "purple";
+
+	ElectricCar EC1(testN, testC);
+	ASSERT_EQ(testN, EC1.getName());
+	ASSERT_EQ(testC, EC1.getColor());
+	ASSERT_EQ("Electric Car Vehicle", EC1.getType());
+	ASSERT_EQ(4, EC1.getTravel());
+	EC1.AddDestination();
+	ASSERT_EQ(8, EC1.getTravel());
+	EC1.AddDestination();
+	ASSERT_EQ(16, EC1.getTravel());
+	EC1.AddDestination();
+	ASSERT_EQ(37, EC1.getTravel());
+}
+
+
 
 
 
