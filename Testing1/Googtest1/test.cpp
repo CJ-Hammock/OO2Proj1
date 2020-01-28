@@ -1,39 +1,6 @@
 #include "pch.h"
 
 #include "../Testing1/ChangeNum.cpp"
-#include "../Testing1/Vehicle.cpp"
-
-TEST(BuildVehicleTest, GetVehicleInit) {
-	string testN = "veh1";
-	string testC = "brown";
-
-	Vehicle V(testN, testC);
-	ASSERT_EQ(testN, V.getName());
-	ASSERT_EQ(testC, V.getColor()); 
-	ASSERT_EQ("Vehicle", V.getType());
-	ASSERT_EQ(999, V.getTravel());
-	V.AddDestination();
-	ASSERT_EQ(1000, V.getTravel());
-
-}
-
-TEST(BuildCarTest, GetCarInit) {
-	string testN = "car1";
-	string testC = "red";
-
-	Car C1(testN, testC);
-	ASSERT_EQ(testN, C1.getName());
-	ASSERT_EQ(testC, C1.getColor());
-	ASSERT_EQ("Car ", C1.getType());
-	ASSERT_EQ(5, C1.getTravel());
-	C1.AddDestination();
-	ASSERT_EQ(10, C1.getTravel());
-
-}
-
-
-
-
 
 
 TEST(ChangeNumTest, DoublePositive) {
