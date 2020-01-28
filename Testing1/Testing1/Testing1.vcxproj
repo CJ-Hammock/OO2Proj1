@@ -21,9 +21,11 @@
   <ItemGroup>
     <ClCompile Include="ChangeNum.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Vehicle.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ChangeNum.h" />
+    <ClInclude Include="Vehicle.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
