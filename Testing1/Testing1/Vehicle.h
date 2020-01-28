@@ -40,8 +40,6 @@ public:
 	//gets overidden
 	void AddDestination();
 
-
-
 };
 
 class GasCar : public Car
@@ -66,4 +64,28 @@ public:
 
 	//gets overidden
 	void AddDestination();
+};
+
+
+class Boat : public Vehicle
+{
+public:
+	//default constructor
+	Boat();
+
+	//name, color, number passengers
+	Boat(string, string, int);
+
+	//gets overidden
+	void AddDestination();
+
+	//additional functions
+
+	int getPassengers();
+	void removePassengers(int);
+	void addPassengers(int);
+
+private:
+	int Passengers;
+
 };

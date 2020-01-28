@@ -95,7 +95,7 @@ void GasCar::AddDestination()
 
 ElectricCar::ElectricCar()
 {
-	Type = "Eelctric " + Type;
+	Type = "Electric " + Type;
 }
 
 ElectricCar::ElectricCar(string n, string c)
@@ -113,3 +113,39 @@ void ElectricCar::AddDestination()
 	else
 		TravelTime = TravelTime + TravelTime + 5;
 }
+
+
+
+ Boat::Boat()
+{
+	 Type = "Boat " + Type;
+}
+
+ Boat::Boat(string n, string c, int pass)
+ {
+	 Name = "S.S. " + n;
+	 Color = c;
+	 Passengers = abs(pass);
+	 TravelTime = 8;
+	 Type = "Boat " + Type;
+ }
+ void Boat::AddDestination()
+ {
+	 TravelTime = TravelTime + 8;
+ }
+
+ int Boat::getPassengers()
+ {
+	 return Passengers;
+ }
+ void Boat::removePassengers(int rem)
+ {
+	 if (rem <= Passengers)
+	 {
+		 Passengers = Passengers - rem;
+	 }
+ }
+ void Boat ::addPassengers(int a)
+ {
+	 Passengers = Passengers + a;
+ }

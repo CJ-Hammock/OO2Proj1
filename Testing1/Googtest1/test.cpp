@@ -61,6 +61,40 @@ TEST(BuildElectricCarTest, GetElectricCar) {
 	ASSERT_EQ(37, EC1.getTravel());
 }
 
+TEST(BuildBoatTest, GetBoatInit) {
+	string testN = "Maria";
+	string testC = "Black";
+
+	Boat B1(testN, testC, 10);
+
+	ASSERT_EQ("S.S. Maria", B1.getName());
+	ASSERT_EQ(testC, B1.getColor());
+	ASSERT_EQ("Boat Vehicle", B1.getType());
+	ASSERT_EQ(8, B1.getTravel());
+	B1.AddDestination();
+	ASSERT_EQ(16, B1.getTravel());
+	B1.AddDestination();
+	ASSERT_EQ(24, B1.getTravel());
+	
+}
+
+TEST(BuildBoatTest, ChangeBoatPassengers) {
+	string testN = "Maria";
+	string testC = "Black";
+	int pass = 10;
+
+	Boat B2(testN, testC, pass);
+
+	ASSERT_EQ(pass, B2.getPassengers());
+	B2.addPassengers(5);
+	ASSERT_EQ(15, B2.getPassengers());
+	B2.removePassengers(3);
+	ASSERT_EQ(12, B2.getPassengers());
+	B2.removePassengers(16);
+	ASSERT_EQ(12, B2.getPassengers());
+
+}
+
 
 
 
